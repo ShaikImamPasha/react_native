@@ -1,0 +1,60 @@
+Tabs:- 
+   it is giving inbuilt tab strautsre(at bootm navtiongion menus).
+   import { Slot, Stack, Tabs } from "expo-router"
+import { View,Text, Image } from "react-native"
+import homeicon from "../assests/home.png"
+
+const TabIcon=({color,focused})=>{
+    return <View className="justify-center items-center">
+         <Image
+         source={homeicon}
+         className="w-7 h-7" 
+         ></Image>
+         <Text className={`text-center ${focused?"text-sm":"text-xs"}`}>Home</Text>
+    </View>
+}
+const TabLayout=()=>{
+  return  <>
+   <Tabs
+   screenOptions={{
+    tabBarShowLabel:false,
+    tabBarActiveTintColor:"#FFA001",
+    tabBarStyle:{
+        backgroundColor:"orange",
+    }
+   }}
+   >
+    <Tabs.Screen name="Home" options={{title:"Home",headerShown:false,tabBarIcon:({color,focused})=>(
+        <TabIcon color={color} focused={focused}/>
+    )}}
+    />
+   </Tabs>
+  </>
+}
+export default TabLayout
+
+
+<SafeAreaView></SafeAreaView> 
+  it is for conatint not over flow the screen out side the screen.
+
+<ScrollView></ScrollView>
+  used to scrol if containt is more than screen size.
+
+input:- 
+      <TextInput secureTextEntry={true}  value="abc" />
+<FlatList>
+  it is used to create list of items.
+  <FlatList
+  data={data}
+  horizontal={true}
+  view
+  renderItem={({item})=>{
+    return <Text>{item}</Text>
+  }}
+  keyExtractor={(item)=>item.id}
+    ListEmptyComponent={<Text>No data</Text>}
+    ListHeaderComponent={<Text>Header</Text>}
+    refreshing={true}
+  />
+
+  reaxct-native-animatble for animation.

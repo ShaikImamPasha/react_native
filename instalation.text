@@ -1,0 +1,28 @@
+react native is cros platiform.thtats mean it can work in both ios and andriod.
+
+instaliation:- 
+  1.vscode
+  2.java 
+    1.go oracle java download webite and download jsd intel chip - x64 DMG installer
+     and install.
+    now setup env vairable.
+    2.go terminal and create file if not there cmd:- touch .zshrc
+    3.now open this cmd: open .zshrc and add this below in the text
+    export JAVA_HOME=$(/usr/libexec/java_home -v 23.0.1)
+     export PATH=$JAVA_HOME/bin:$PATH
+    save and close the .zshrc
+    4.next cmd:-source .zshrc
+    5.check with program run
+  3.andriod studio (for andriod)
+     go and download andriod studio from developwr.andriod.com/studio
+      now open and download and install required softwares.
+  4.xcode (for mac devices devlopment onbly)
+  
+
+  installing react-natice:-
+      npx create-expo-app@latest
+      npm run andriod
+       or
+
+     npx react-native init foldername
+     npx react-native run-android

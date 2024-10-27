@@ -1,0 +1,51 @@
+cmds:- adb (for all cmds)
+      adb devices (for show the all conected devicess for mobile)
+      npm run andriod
+render will start from app/index.js 
+we can add also _layout.js
+flow:-
+index.js->_layout.js
+
+if we create file another ex profile.js then it will:- 
+profile.js->_layout.js
+
+View:- 
+ it is for stylyung,flex,..
+   <View>text,...</View>
+ Slot:- 
+  it is for render childerns in layout.
+  <Fotter>
+    <Slot><Slont>
+ <Nav>
+
+ Stack:- 
+  it is in hirarchary move the navation.here it in flow ex: prfoile->edit->moreinf 
+   moring<-edit<-profile
+  also it gives in arrow strcure some good page strutur
+
+  NativeWind:-(for css)
+ 1.   npm install nativewind
+npm install --save-dev tailwindcss@3.3.2
+
+2.add in tailwind.config.js file
+// tailwind.config.js
+
+module.exports = {
+     content: ["./app/**/*{js,jsx,ts,tsx}"],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    }
+
+3.add in babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+      plugins: ["nativewind/babel"],
+
+  };
+};
+
+
